@@ -13,7 +13,7 @@ test_psgi $app, sub {
     my $cb = shift;
     my $res = $cb->(GET "/");
     ok $res->content, "Non-empty response at '/'"; 
-    is $res->code, "200", "HTTP status 200 at '/'";
+    is $res->code, "300", "HTTP status 300 at '/'";
 };
 
 done_testing;
